@@ -4,7 +4,6 @@
   "authors": [
     "Gurpreet Singh <gsran82@gmail.com>"
   ],
-  "main": "app.js",
   "license": "MIT",
   "ignore": [
     "**/.*",
