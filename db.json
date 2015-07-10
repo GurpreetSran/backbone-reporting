@@ -1,9 +1,19 @@
 {
-  "posts": [
+  "reports": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "country": "us",
+      "population": 12666,
+      "isInEuro": false
+    },
+    {
+      "country": "uk",
+      "population": 1666,
+      "isInEuro": true
+    },
+    {
+      "country": "jp",
+      "population": 45666,
+      "isInEuro": false
     }
   ],
   "comments": [

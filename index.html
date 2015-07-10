@@ -6,11 +6,39 @@
 	<title>Backbone Reporting</title>
 	<link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.css"> 
 </head>
-<body>
-	<div id="page">Hello</div>
+<body class="center-block" style="max-width: 800px">
+	<div id="page"><!-- Dynamic views will be injected here--></div>
+	
+
+	<script type="text/template" id="reports-list-template">	
+		<hr>
+			<h2>Report List</h2>
+		<hr>
+		<a  id="#new-report-btn" class="btn btn-primary" href="/new">New Report </a> 
+		<table class="table table-striped">	
+			<thead>
+				<tr>
+					<th>Country</th>
+					<th>Pupulation</th>
+					<th>Is In Europe</th>
+				</tr>	
+			</thead>
+			<tbody>		
+				<% _.each(reports, function(report) { %>
+					<tr>
+						<td><%= report.get('country') %> </td>
+						<td><%= report.get('population') %></td>
+						<td><%=report.get('isInEuro') %></td>
+					</tr>
+				<% }) %>
+			</tbody>
+		</table>		 
+	</script>
+
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/underscore/underscore.js"></script>
 	<script src="bower_components/backbone/backbone.js"></script>
-	<script src="app/js/main.js"></script>						
+	<script src="app/js/main.js"></script>			
+
 </body>
 </html> 

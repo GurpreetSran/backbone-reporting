@@ -1,18 +1,47 @@
 //Define Router for SPA
+'use strict';
+
+$.ajaxPrefilter(function(options, originalOptions, jqHXR){
+	options.url = 'http://localhost:3000' + options.url; 
+}) 
+
+var Reports = Backbone.Collection.extend({
+	url: '/reports'
+});
 
 var ReportList = Backbone.View.extend({
 	el: '#page',
 	render: function() {
-		this.$el.html('On home page!');
+		var reports = new Reports();
+
+		var _self = this;
+
+		reports.fetch({
+
+			success: function(reports){
+				var template = _.template($('#reports-list-template').html());
+				var data = {reports: reports.models }; 
+				_self.$el.html(template(data));
+			}
+		})
 	} 
 });
 
-var reportList = new ReportList();
 
+var ReportView = Backbone.View.extend({
+	el: '#page',
+	render: function() {
+		this.$el.html('This is report view');
+	}
+})
+
+
+var reportList = new ReportList();
 
 var Router = Backbone.Router.extend({
 	routes: {
-		'': 'home' 
+		'': 'home',
+		'new': 'editReport' 
 	}
 });
 
@@ -22,58 +51,20 @@ router.on('route:home', function(){
 	reportList.render();	
 });
 
-Backbone.history.start();
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
-
-var report = Backbone.Model.extend({
-	defaults: {
-		country: 'UK',
-		population: 120000,
-		sport: 'Football' 
-	}
+router.on('route:editReport', function(){
+	var reportView = new ReportView();
+	reportView.render();
 });
 
-us_report = new report({
-	country: 'us'
-})
+Backbone.history.start({pushState: true});
 
-in_report = new report({
-	country: 'in'
-})
+$(document).on('click', 'a:not([data-bypass])', function (evt) {
 
-var reports = Backbone.Collection.extend({
-	model: report
-});
+    var href = $(this).attr('href');
+    var protocol = this.protocol + '//';
 
-
-var finalReport = new reports ([us_report, in_report]);
-
-
-
-var view = Backbone.View.extend({
-
-	render: function() {
-		this.el = $('#view').html('Backbone View');
-	}
-
-})
-
-
-console.log(finalReport.models[1].toJSON())
-
-
-myView = new view();
-myView.render(); */
+    if (href.slice(protocol.length) !== protocol) {
+      evt.preventDefault();
+      router.navigate(href, true);
+    }
+  });
