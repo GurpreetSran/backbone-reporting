@@ -1,16 +1,21 @@
 {
   "name": "backbone-reporting",
   "version": "0.0.1",
+  "repository": "https://github.com/GurpreetSran/backbone-reporting-2015",
   "description": "Backbone reporting SPA",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server -a localhost -p 8000 -c-1"
+    "test": "karma start karma.conf.js",
+    "start": "http-server -a localhost -p 8000 -o -c-1"
   },
   "author": "Gurpreet Singh",
   "license": "ISC",
   "devDependencies": {
     "bower": "^1.4.1",
     "http-server": "^0.8.0",
-    "httpserver": "^0.2.0"
+    "httpserver": "^0.2.0",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.37",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.6"
   }
 }
