@@ -17,9 +17,9 @@ This app is using `json-server` for back end implementation.
 3. do `nmp start`. It should open up browser with app running.
 4. do `nmp test`. It is using karma, jasmine and chrome to run unit tests. Check out `karma.conf.js` for more details.
 
-##HDependencies
--Jquery
--Underscore
--Bootstrap 
+##Dependencies
+- Jquery
+- Underscore
+- Bootstrap 
 
-Note: App will only work properly from root because backend doesn't support redirection.
+Note: App will only work properly from root because backend(json-server) doesn't support redirection.
