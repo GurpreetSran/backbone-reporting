@@ -7,7 +7,8 @@
     "test": "karma start karma.conf.js",
     "start-json": "json-server --watch db.json",
     "start-http": "http-server -a localhost -p 5000 -o -c-1",
-    "start": "npm run start-json & npm run start-http"
+    "start": "npm run start-json & npm run start-http",
+    "postinstall" : "bower install"
   },
 
   "author": "Gurpreet Singh",
