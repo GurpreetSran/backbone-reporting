@@ -22,4 +22,4 @@ This app is using `json-server` for back end implementation.
 - Underscore
 - Bootstrap 
 
-Note: App will only work properly from root because backend(json-server) doesn't support redirection.
+Note: App will only work properly from root because backend(json-server) doesn't support redirection. Also backbone apps should be structures using requirejs.  

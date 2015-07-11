@@ -27,9 +27,13 @@ var Reports = Backbone.Collection.extend({
 });
 
 var Report = Backbone.Model.extend({
-	urlRoot: '/reports'
+	urlRoot: '/reports',
+	validate: function(attrs) {
+		if (!attrs.population) {
+			return "cannot have an empty population";
+		}
+	}
 });
-
 
 var ReportList = Backbone.View.extend({
 	el: '#page',
@@ -61,7 +65,7 @@ var ReportList = Backbone.View.extend({
 		var report = new Report({
 			id: reportId
 		});
-		
+
 		report.destroy({ // Get current record; 
 			success: function(report) {
 				_self.render();
@@ -108,6 +112,12 @@ var ReportView = Backbone.View.extend({
 		var reportDetails = $(evt.currentTarget).serializeObject();
 		var report = new Report();
 		var _self = this;
+		
+		report.on('invalid', function(report, error){
+			console.log(error);
+			return false;
+		});	
+
 		report.save(reportDetails, {
 			success: function() {
 				_self.undelegateEvents(); //Hack to undelegate events. 

@@ -21,6 +21,8 @@
     "karma": "^0.12.37",
     "karma-chrome-launcher": "^0.2.0",
     "karma-jasmine": "^0.3.6",
-    "karma-spec-reporter": "0.0.19"
+    "karma-sinon": "^1.0.4",
+    "karma-spec-reporter": "0.0.19",
+    "sinon": "^1.15.4"
   }
 }

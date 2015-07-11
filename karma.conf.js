@@ -1,27 +1,28 @@
-module.exports = function(config){
+module.exports = function(config) {
   config.set({
 
-    basePath : './',
+    basePath: './',
 
-    files : [
+    files: [
       'bower_components/jquery/dist/jquery.js',
       'bower_components/underscore/underscore.js',
       'bower_components/backbone/backbone.js',
       'app/js/*.js'
     ],
 
-    autoWatch : true,
+    autoWatch: true,
 
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'sinon'],
 
-    browsers : ['Chrome'],
+    browsers: ['Chrome'],
 
-    reporters : ['spec'],
+    reporters: ['spec'],
 
-    plugins : [
-            'karma-chrome-launcher',
-            'karma-jasmine',
-            'karma-spec-reporter'
-            ]  
+    plugins: [
+      'karma-chrome-launcher',
+      'karma-jasmine',
+      'karma-spec-reporter',
+      'karma-sinon'
+    ]
   });
 };
