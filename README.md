@@ -1,14 +1,25 @@
-Description:
+#Backbone Reporting App
 
+Basic Backbone Reporting Demo app using pushstate. It is fully functioning app with following functionality:
+- Backbone routing with pushstate.
+- Add Report
+- Edit Report
+- Delete Report
+- Added unit test support (Jasmine)
+- Underscore templates
 
+This app is using `json-server` for back end implementation.  
 
-Add templating 
+##How to run 
 
- 
+1. Make sure you have node installed.  
+2. do `nmp install`
+3. do `nmp start`. It should open up browser with app running.
+4. do `nmp test`. It is using karma, jasmine and chrome to run unit tests. Check out `karma.conf.js` for more details.
 
-1: do NPM install
-2: do NPM start 
-3: Go to url and it should be working
--------
-4. do NPM test and it should do the tests 
+##HDependencies
+-Jquery
+-Underscore
+-Bootstrap 
 
+Note: App will only work properly from root because backend doesn't support redirection.
