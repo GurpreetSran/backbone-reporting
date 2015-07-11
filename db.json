@@ -1,55 +1,22 @@
 {
   "reports": [
     {
-      "country": "US",
-      "population": 12666,
-      "isInEuro": false
-    },
-    {
       "country": "UK",
-      "population": 1666,
-      "isInEuro": true
+      "population": 989898,
+      "isInEuro": true,
+      "id": 1
     },
     {
       "country": "JP",
-      "population": 45666,
-      "isInEuro": false
+      "population": 230945,
+      "isInEuro": false,
+      "id": 2
     },
     {
-      "country": "ds",
-      "population": "f",
-      "in-europe": "d",
-      "id": "d4bdbacf-657b-4766-82d7-f297edc93fcd"
-    },
-    {
-      "country": "Dumm",
-      "population": "Du",
-      "in-europe": "Yes",
-      "id": "c69b3c68-1eb6-465b-adea-462f30c32a6d"
-    },
-    {
-      "country": "yesy",
-      "population": "yesy",
-      "in-europe": "yesyy",
-      "id": "c9921810-8cb2-48df-b94e-046f198ad76a"
-    },
-    {
-      "country": "e",
-      "population": "e",
-      "in-europe": "e",
-      "id": "61e06b3b-afe5-454e-9923-c6511211ddfb"
-    },
-    {
-      "country": "e",
-      "population": "e",
-      "in-europe": "e",
-      "id": "533489d0-ac2f-4249-906b-075e74040ba6"
-    },
-    {
-      "country": "xx",
-      "population": "xx",
-      "isInEuro": "xx",
-      "id": "f94f6211-a4df-4ef2-a027-866288a45ec2"
+      "country": "US",
+      "population": "098989",
+      "isInEuro": false,
+      "id": 3
     }
   ]
 }
