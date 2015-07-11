@@ -5,7 +5,7 @@ Basic Backbone Reporting Demo app using pushstate. It is fully functioning app w
 - Add Report
 - Edit Report
 - Delete Report
-- Added unit test support (Jasmine)
+- Added unit test support (Jasmine & Sinon)
 - Underscore templates
 
 This app is using `json-server` for back end implementation.  

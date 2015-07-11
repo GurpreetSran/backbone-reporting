@@ -1,4 +1,3 @@
-//Define Router for SPA
 'use strict';
 
 $.ajaxPrefilter(function(options, originalOptions, jqHXR) {
@@ -56,7 +55,7 @@ var ReportList = Backbone.View.extend({
 
 	deleteUser: function(evt) {
 		var _self = this;
-		
+
 		var reportId = $(evt.target).attr('data-report-id');
 
 		var report = new Report({

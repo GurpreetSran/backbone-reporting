@@ -1,7 +1,13 @@
-describe('Jasmine test', function(){
+describe('Backbone reporting Report model', function() {
 
-	it('This works', function() {
-		expect(1).toEqual(2); 
-	});
+  describe('when instantiated', function() {
 
+    it('should exhibit attributes', function() {
+      var report = new Report({
+        country: 'UK'
+      });
+      expect(report.get('country'))
+        .toEqual('UK');
+    });
+  });
 });
