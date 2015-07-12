@@ -59,16 +59,23 @@
 
 
 
-  describe("Reporting router", function() {
+  describe('App router', function() {
   	beforeEach(function() {
   		this.router = new Router();
   		this.routeSpy = sinon.spy();
   	});
 
-  	it("blank hash should be going to home", function() {
-  		this.router.on("route:home", this.routeSpy);
+  	it('blank hash should be going to home', function() {
+  		this.router.on('route:home', this.routeSpy);
   		this.router.navigate('', true);
   		expect(this.routeSpy.calledOnce).toBeTruthy();
+  	});
+
+  	it('fires the edit route with id', function() {
+  		this.router.on('route:editReport', this.routeSpy);
+  		this.router.navigate('edit/1', true);
+  		expect(this.routeSpy.calledOnce).toBeTruthy();
+  		expect(this.routeSpy.calledWith('1')).toBeTruthy();
   	});
 
   });
